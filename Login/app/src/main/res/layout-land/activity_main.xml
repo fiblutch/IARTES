@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DAC4DE"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/loginField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputEmail"
+        app:layout_constraintTop_toTopOf="@+id/inputEmail"
+        app:layout_constraintVertical_bias="0.0"
+        tools:layout_editor_absoluteX="35dp" />
+
+    <EditText
+        android:id="@+id/inputEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="270dp" />
+
+    <TextView
+        android:id="@+id/senhaField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Senha"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/inputSenha"
+        app:layout_constraintTop_toTopOf="@+id/inputSenha"
+        tools:layout_editor_absoluteX="31dp" />
+
+    <EditText
+        android:id="@+id/inputSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.251"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Salvar informações de Login"
+        android:visibility="visible"
+        tools:layout_editor_absoluteX="434dp"
+        tools:layout_editor_absoluteY="253dp" />
+
+    <Button
+        android:id="@+id/entrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="imprimeMensagaem"
+        android:text="Entrar"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.776"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="335dp" />
+
+    <TextView
+        android:id="@+id/credentialsField"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Digite suas Credenciais"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.26"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/headerLayout"
+        app:layout_constraintVertical_bias="0.28" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/headerLayout"
+        android:layout_width="737dp"
+        android:layout_height="201dp"
+        android:background="#BBA3DB"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/nameLayout"
+            android:layout_width="210dp"
+            android:layout_height="144dp"
+            tools:layout_editor_absoluteX="354dp"
+            tools:layout_editor_absoluteY="33dp">
+
+            <TextView
+                android:id="@+id/appName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Purple"
+                android:textColor="#781E87"
+                android:textSize="48sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/appName2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="casual"
+                android:text="Bird"
+                android:textColor="#781E87"
+                android:textSize="48sp"
+                app:layout_constraintTop_toBottomOf="@+id/appName"
+                tools:layout_editor_absoluteX="99dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="128dp"
+            android:layout_height="135dp"
+            android:layout_marginStart="120dp"
+            android:rotation="-23"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/purple_bird_svg_hi" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
